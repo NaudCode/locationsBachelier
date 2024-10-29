@@ -649,6 +649,11 @@ progress {
   .container-sm, .container {
     max-width: 540px;
   }
+  #mainNav.navbar-shrink {
+    background-color: #000;
+    border-bottom: 1px solid #ccc; 
+  }
+
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
@@ -4213,7 +4218,7 @@ textarea.form-control-lg {
   --bs-navbar-color: rgba(255, 255, 255, 0.55);
   --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #fff;
+  --bs-navbar-active-color: #000000;
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
@@ -11030,13 +11035,14 @@ body {
     color: #fff;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #000;
+    border-bottom: 1px solid #ccc; 
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #000;
+    color: #fff;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    color: #fff;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
@@ -11089,12 +11095,18 @@ body {
   max-width: 20rem;
   font-size: 1rem;
 }
+
 @media (min-width: 768px) {
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
     line-height: 4rem;
   }
+  #mainNav.navbar-shrink {
+    background-color: #000;
+    border-bottom: 1px solid #ccc; 
+  }
 }
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
@@ -11109,6 +11121,12 @@ body {
     max-width: 30rem;
     font-size: 1.25rem;
   }
+
+  #mainNav.navbar-shrink {
+    background-color: #000;
+    border-bottom: 1px solid #ccc; 
+  }
+
 }
 
 .about-section {
