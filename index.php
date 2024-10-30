@@ -42,6 +42,8 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about"><?php echo $about ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects"><?php echo $location ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#myCarousel"><?php echo $photo ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#recomandation"><?php echo $reco ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup"><?php echo $contact ?></a></li>
                     </ul>
                 </div>
@@ -63,7 +65,7 @@
         <section class="about-section text-center" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-10">
                         <h2 class="text-white mb-4"><?php echo $house ?></h2>
                         <p class="text-white-50"><?php echo $descHouse ?></p>
                     </div>
@@ -121,87 +123,141 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Signup-->
-        <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                            </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-12 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center">
+                                    <h4 class="text-white"><?php echo $other ?></h4>
+                                    <p class="mb-0 text-white-50"><?php echo $otherdesc ?></p>
                                 </div>
                             </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Contact-->
-        <section class="contact-section bg-black">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
-                            </div>
-                        </div>
+
+        <!-- Image Carousel -->
+        <section>
+            <div id="myCarousel" class="carousel slide w-50 mx-auto mb-5 mt-5" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="assets/img/Chambre_enfant.avif" class="d-block w-100" alt=""> 
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
-                            </div>
-                        </div>
+                    <div class="carousel-item">
+                    <img src="assets/img/Chambre_parent.webp" class="d-block w-100" alt="">
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">+1 (555) 902-8832</div>
-                            </div>
-                        </div>
+                    <div class="carousel-item">
+                    <img src="assets/img/cuisine.jpeg" class="d-block w-100" alt="">
                     </div>
                 </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"><?php echo $previous ?></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"><?php echo $next ?></span>
+                </button>
+                </div>
+        </section> 
+
+
+
+        <section class="reco-section bg-light" id="recomandation">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-heart fa-2x mb-2 text-dark"></i>
+                        <h2 class="text-dark mb-5"><?php echo $recoTitle ?></h2>
+                        <div class="container px-4 px-lg-5">
+                            <div class="row gx-4 gx-lg-5">
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="card py-4 h-100">
+                                        <div class="card-body text-center">
+                                            <h4 class="text-uppercase m-0"><?php echo $parc ?></h4>
+                                            <hr class="my-4 mx-auto" />
+                                            <div class="small text-black-50"><a href="https://www.puydufou.com/" target="_blank">Puy du fou</a>
+                                            <p>Description</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="card py-4 h-100">
+                                        <div class="card-body text-center">
+                                            <h4 class="text-uppercase m-0"><?php echo $restaurant ?></h4>
+                                            <hr class="my-4 mx-auto" />
+                                            <div class="small text-black-50"><a href="#!">Lien google map</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="card py-4 h-100">
+                                        <div class="card-body text-center">
+                                            <h4 class="text-uppercase m-0"><?php echo $icecream ?></h4>
+                                            <hr class="my-4 mx-auto" />
+                                            <div class="small text-black-50">Commerce + photo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+        </section>
+
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-flight fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Contact</h2>
+                        <div class="container px-4 px-lg-5">
+                            <div class="row gx-4 gx-lg-5">
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="card py-4 h-100">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                            <h4 class="text-uppercase m-0">Address</h4>
+                                            <hr class="my-4 mx-auto" />
+                                            <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="card py-4 h-100">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-envelope text-primary mb-2"></i>
+                                            <h4 class="text-uppercase m-0">Email</h4>
+                                            <hr class="my-4 mx-auto" />
+                                            <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="card py-4 h-100">
+                                        <div class="card-body text-center">
+                                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                            <h4 class="text-uppercase m-0">Phone</h4>
+                                            <hr class="my-4 mx-auto" />
+                                            <div class="small text-black-50">+1 (555) 902-8832</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+
                 <div class="social d-flex justify-content-center">
                     <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>

@@ -2,11 +2,11 @@
 
 //nav bar
  $about = "à Propos de";
- $photo = "photos";
- $location = "localisation";
- $equipment = "équipements";
+ $photo = "Photos";
+ $location = "Nos équipements";
  $activity = "activités";
  $contact = "contact";
+ $reco = "Nos Recomandations";
 
 // Cover Page
  $start = "découvrir";
@@ -18,7 +18,9 @@
     Située à 300 mètres de l'océan (chemin de promenade qui emmène à 10 min à pied aux plages et commerces de la parée ou de la sauzaie). <br>
     Commerce vival, restaurant à 5 min à pied.<br> 
     Profitez d'un jardin, barbecue, terrasse ou véranda. Notre maison est une maison familiale, avec à disposition le nécessaire de cuisine (sel, poivre, huile ), 
-    cafetière à grain, dolce Gusto, sodastream, … coin livre, jeux enfants, …";
+    cafetière à grain, dolce Gusto, sodastream, … coin livre, jeux enfants, … <br>
+    <br>
+    <b>Remarque : <b/>La maison est encore en cours de rénovation. Ce n est pas un problème pour y séjourner. Cependant, il manque quelques caches prises par exemple ou certaines finitions de peinture, notamment dans les chambres.";
 
 
 //Activities
@@ -36,9 +38,25 @@
   
  $swimpoolTitle = "Piscine";
  $swimpool = "Savourez de notre piscine de 0.6m à 2m de profondeur. Traité à l'eau salé et autonome dans la régulation du PH, pas de sensation de chlore sur la peau et cheveux. 
-    Celle-ci est couverte par un dome de 1.8m de hauteur, et verouillage par clé pour la sécurité des enfants." 
+    Celle-ci est couverte par un dome de 1.8m de hauteur, et verouillage par clé pour la sécurité des enfants.";
 
- //alt photos
+ $other = "Autre";
+ $otherdesc = "Venez léger, les draps sont disponible sur place, ainsi qu'une machine à lavé et étendoir.<br>
+   Les équipements de cuisine de base sont disponible (réfrigérateur, plaque de cuisson avec ustensiles...), un lave vaisselle et une machine à expresso à gain.<br>
+   De plus, un barbecue à gaz disponible sur la terrasse atelante à la cuisine et véranda.<br>
+   Quant au stationnement, vous pouvez garer votre véhicule en sécurité devant la maison grâce au portail électrique. L'accès depuis le garage rejoint la cuisine, pièce maitresse de le maison.";
+
+//carousel
+ $next = "Suivant";
+ $previous = "Précédent";
+
+//Recomandation
+ $recoTitle = "Nos recomandations";
+ $parc = "Parc d'actraction";
+ $restaurant = "Restaurant";
+ $icecream = "Commerce";
+
+   //alt photos
 
 
 
