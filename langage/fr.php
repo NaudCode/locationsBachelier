@@ -1,63 +1,82 @@
 <?php
 
-//nav bar
- $about = "à Propos de";
- $photo = "Photos";
- $location = "Nos équipements";
- $activity = "activités";
- $contact = "contact";
- $reco = "Nos Recomandations";
+// Nav bar
+$about = "À propos";
+$photo = "Photos";
+$activity = "Activités";
+$contact = "Contact";
+$reco = "Recommandations";
 
 // Cover Page
- $start = "découvrir";
- $firstH2 = "Profitez d'une maison spacieuse au bord de la côte vendéenne.";
+$start = "Découvrir";
+$firstH2 = "Profitez d'une spacieuse maison avec piscine privative, à deux pas de l'océan.";
 
-//Presentation House
- $house = "Profitez d'un logement complet avec piscine privative.";
- $descHouse = "Jolie maison de 3 chambres avec jardin entièrement cloturé comprenant une piscine sécurisée d'accès par dôme. <br> 
-    Située à 300 mètres de l'océan (chemin de promenade qui emmène à 10 min à pied aux plages et commerces de la parée ou de la sauzaie). <br>
-    Commerce vival, restaurant à 5 min à pied.<br> 
-    Profitez d'un jardin, barbecue, terrasse ou véranda. Notre maison est une maison familiale, avec à disposition le nécessaire de cuisine (sel, poivre, huile ), 
-    cafetière à grain, dolce Gusto, sodastream, … coin livre, jeux enfants, … <br>
-    <br>
-    <b>Remarque : <b/>La maison est encore en cours de rénovation. Ce n est pas un problème pour y séjourner. Cependant, il manque quelques caches prises par exemple ou certaines finitions de peinture, notamment dans les chambres.";
+// Presentation House
+$house = "Un havre de paix idéal pour des vacances en famille.";
+$descHouse = "Cette charmante maison de 3 chambres, avec jardin entièrement clôturé, vous offre un cadre idéal pour des vacances relaxantes. <br>
+    À 300 mètres de l'océan, avec un chemin de promenade qui vous emmène en 10 minutes à pied aux plages et commerces de la Parée ou de la Sauzaie.<br>
+    Commerce Vival et restaurant à 5 minutes à pied.<br>
+
+    Profitez du jardin, du barbecue, de la terrasse ou de la véranda pour des moments de détente en famille ou entre amis. <br>
+    Notre maison est équipée de tout le nécessaire pour un séjour agréable. <br>
+
+    <b>Remarque :</b> La maison est encore en cours de rénovation (quelques finitions à faire). Cependant, cela ne vous empêchera pas d'y séjourner confortablement.<br>";
 
 
-//Activities
+// Activities
 
- $TitleActivity = "Nos mise à disposition";
+$TitleActivity = "Loisirs et équipements";
 
- $hobbiesTitle = "Activités";
- $hobbies = "Profitez de différentes activitées mise à votre disposition, tel que que jeux de société ou de notre babyfoot de superbe qualité !
-    <br>Vous trouverez aussi différents jouets mis à disposition dans la chambre d'enfant.
-    <br>Ainsi qu'une petite bibliothèque pour lire paisiblement dans la véranda ou à la piscine.";
-
- $tvTitle = "Multimédia";    
- $tv = "Restez connecté, un accès wifi est mise à disposition. De plus vous pouvez profiter de téléviseurs disposé dans les chambres adultes, salon et véranda. 
-    Ces téléviseurs sont connectés via Android TV, afin de pouvoir caster des vidéos depuis son smartphone.";    
+$hobbiesTitle = "Loisirs & Multimédia";
+$hobbies = "Profitez des différents loisirs mis à votre disposition : <br>
+    <ul>
+    <li>Jeux de société ;</li>
+    <li>Baby-foot ;</li>
+    <li>Jouets pour enfants ;</li>
+    <li>Bibliothèque.</li>
+    </ul>";
+$tv = "Restez connecté grâce à l'accès Wi-Fi mis à disposition. <br>
+    Vous pouvez également profiter de téléviseurs connectés (Android TV) dans les chambres adultes, le salon";
   
- $swimpoolTitle = "Piscine";
- $swimpool = "Savourez de notre piscine de 0.6m à 2m de profondeur. Traité à l'eau salé et autonome dans la régulation du PH, pas de sensation de chlore sur la peau et cheveux. 
-    Celle-ci est couverte par un dome de 1.8m de hauteur, et verouillage par clé pour la sécurité des enfants.";
+$swimpoolTitle = "Piscine & Extérieur";
+$swimpool = "Savourez notre piscine traitée au sel, avec une profondeur allant de 0.6m à 2m, couverte par un dôme rétractable de 1.8m de hauteur. <br>
+    Le système de régulation du pH automatique vous garantit une eau douce, sans sensation de chlore sur la peau et les cheveux. <br><br>
+    Ainsi qu'une terrasse aménagée sous le soleil ou à l'ombre grâce au store banne mororisé, pour vos repas en plein air, avec un barbecue à gaz est à votre disposition.";
 
- $other = "Autre";
- $otherdesc = "Venez léger, les draps sont disponible sur place, ainsi qu'une machine à lavé et étendoir.<br>
-   Les équipements de cuisine de base sont disponible (réfrigérateur, plaque de cuisson avec ustensiles...), un lave vaisselle et une machine à expresso à gain.<br>
-   De plus, un barbecue à gaz disponible sur la terrasse atelante à la cuisine et véranda.<br>
-   Quant au stationnement, vous pouvez garer votre véhicule en sécurité devant la maison grâce au portail électrique. L'accès depuis le garage rejoint la cuisine, pièce maitresse de le maison.";
+$kitchenTitle = "Équipement de la maison";
+$kitchen = "Notre maison est équipée de tout le nécessaire pour un séjour agréable : <br>
+    <ul>
+    <li>Cuisine équipée (sel, poivre, huile, cafetière à grain, Sodastream...) ;</li>
+    <li>Draps de lit et serviettes ;</li>
+    <li>Machine à laver.</li>";
 
-//carousel
- $next = "Suivant";
- $previous = "Précédent";
+// Carousel
+$next = "Suivant";
+$previous = "Précédent";
 
-//Recomandation
- $recoTitle = "Nos recomandations";
- $parc = "Parc d'actraction";
- $restaurant = "Restaurant";
- $icecream = "Commerce";
+// Recommandations
+$recoTitle = "Nos recommandations";
+$parc = "Parc d'attraction";
+$pdf_desc = "Vivez l'histoire au Puy du Fou ! Spectacles grandioses et reconstitutions immersives vous feront voyager dans le temps.  Une expérience inoubliable pour toute la famille !";
+$restaurant = "Restaurants";
+$icecream = "Commerces";
+$lien_office = "https://www.payssaintgilles-tourisme.fr/destination/nos-destinations/bretignolles-sur-mer/";
+$lien_mairie = "https://www.bretignolles-sur-mer.fr/";
 
-   //alt photos
+$other_reco = "Pour toutes autres informations, nous vous recommandons d'aller sur le site de <a href=\"" . $lien_office . "\" target=\"_blank\">l'office du tourisme</a>, ou celui celui de la <a href=\"" . $lien_mairie . "\" target=\"_blank\">mairie de Bretignolles sur mers</a>.
+<br>Les informations sur les horaires et hauteurs des marées y sont présentes.";
 
 
+// Contacts
+$addressTitle = "Adresse";
+$address = "44 Rue Sainte Véronique<br>85470 Brétignolles Sur Mers<br>France";
+$phone = "Téléphone";
+$phone_number = "+33 6 64 16 24 93";
+$mail = "naud.bachelier.alex@gmail.com";
+
+//cookie
+$biscuitMessage = "Nous respectons votre vie privée : zéro cookie, zéro collecte des données personnelles.";
+
+// Alt photos
 
 ?>

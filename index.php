@@ -41,10 +41,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about"><?php echo $about ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects"><?php echo $location ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects"><?php echo $TitleActivity ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#myCarousel"><?php echo $photo ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#recomandation"><?php echo $reco ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup"><?php echo $contact ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><?php echo $contact ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -73,35 +73,25 @@
                 <img class="img-fluid" src="assets/img/veranda_cosy.jpeg" alt="..." />
             </div>
         </section>
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
 
-            <div class="text-center"><p><h2><?php echo $TitleActivity ?></h2></p></div>
+
+        <!-- Projects home equipments-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="text-center mb-5">
+                <i class="fa-solid fa-house fa-2x mb-2 text-dark"></i>
+                <p><h2><?php echo $TitleActivity ?></h2></p>
+            </div>
+
             <div class="container px-4 px-lg-5">
 
-                <!-- Featured Project Row-->
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="assets/img/babyfoot.png" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
+                        <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white"><?php echo $hobbiesTitle ?></h4>
+                                <div class="project-text w-100 my-auto text-lg-right">
+                                    <h4 class="text-white text-center mb-3"><?php echo $hobbiesTitle ?></h4>
                                     <p class="mb-0 text-white-50"><?php echo $hobbies ?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project One Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/salon.avif" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white"><?php echo $tvTitle ?></h4>
                                     <p class="mb-0 text-white-50"><?php echo $tv ?></p>
                                 </div>
                             </div>
@@ -109,27 +99,28 @@
                     </div>
                 </div>
 
-                <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="assets/img/piscine_securisee.jpg" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white"><?php echo $swimpoolTitle ?></h4>
-                                    <p class="mb-0 text-white-50"><?php echo $swimpool ?></p>
+                                <div class="project-text w-100 my-auto text-lg-left">
+                                <h4 class="text-white text-center "><?php echo $swimpoolTitle ?></h4>
+                                <p class="mb-0 text-white-50"><?php echo $swimpool ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-12 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/cuisine.jpeg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center">
-                                    <h4 class="text-white"><?php echo $other ?></h4>
-                                    <p class="mb-0 text-white-50"><?php echo $otherdesc ?></p>
+                                <div class="project-text w-100 my-auto text-lg-right">
+                                    <h4 class="text-white text-center"><?php echo $kitchenTitle ?></h4>
+                                    <p class="mb-0 text-white-50"><?php echo $kitchen ?></p>
                                 </div>
                             </div>
                         </div>
@@ -140,6 +131,12 @@
 
         <!-- Image Carousel -->
         <section>
+
+            <div class="text-center mb-3 mt-5">
+                <i class="fa-solid fa-image fa-2x mb-2 text-dark"></i>
+                <p><h2><?php echo $photo ?></h2></p>
+            </div>
+
             <div id="myCarousel" class="carousel slide w-50 mx-auto mb-5 mt-5" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -170,7 +167,7 @@
         </section> 
 
 
-
+<!-- Recommandations -->
         <section class="reco-section bg-light" id="recomandation">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -183,8 +180,8 @@
                                         <div class="card-body text-center">
                                             <h4 class="text-uppercase m-0"><?php echo $parc ?></h4>
                                             <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50"><a href="https://www.puydufou.com/" target="_blank">Puy du fou</a>
-                                            <p>Description</p>
+                                            <div class="small text-black-50"><a href="https://www.puydufou.com/" target="_blank"><img src="assets/img/logo_pdfou.jpg" class="img-fluid" alt="Logo Puy du fou"></a>
+                                            <p><?php echo $pdf_desc ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -207,18 +204,21 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="text-center mb-3 mt-5">
+                                <p><?php echo $other_reco ?></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div> 
         </section>
 
         <!-- Contact-->
-        <section class="contact-section bg-black">
+        <section class="contact-section" id="contact">
                 </div>
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-flight fa-2x mb-2 text-white"></i>
+                        <i class="far fa-address-book fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Contact</h2>
                         <div class="container px-4 px-lg-5">
                             <div class="row gx-4 gx-lg-5">
@@ -226,9 +226,9 @@
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
                                             <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                            <h4 class="text-uppercase m-0">Address</h4>
+                                            <h4 class="text-uppercase m-0"><?php echo $addressTitle ?></h4>
                                             <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                                            <div class="small text-black-50"><?php echo $address ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -238,7 +238,7 @@
                                             <i class="fas fa-envelope text-primary mb-2"></i>
                                             <h4 class="text-uppercase m-0">Email</h4>
                                             <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                                            <div class="small text-black-50"><a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,9 +246,9 @@
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
                                             <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                            <h4 class="text-uppercase m-0">Phone</h4>
+                                            <h4 class="text-uppercase m-0"><?php echo $phone ?></h4>
                                             <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50">+1 (555) 902-8832</div>
+                                            <div class="small text-black-50"><a href="tel:<?php echo $phone_number ?>"><?php echo $phone_number ?></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -258,23 +258,27 @@
                 </div>  
 
 
-                <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
+
+                <div class="airbnb-embed-frame" data-id="1076467562844958320" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;"><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget">Voir sur Airbnb</a><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget" rel="nofollow">Maison de vacances</a><script async="" src="https://www.airbnb.fr/embeddable/airbnb_jssdk"></script></div>                </div>
+
         </section>
+
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
+        
+        <!-- Cookies Promp -->
+        <div id="cookie-bar">
+        <p><?php echo $biscuitMessage ?></p>
+        <span id="close-cookie-bar">&#10006;</span> 
+        </div>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
     </body>
 </html>

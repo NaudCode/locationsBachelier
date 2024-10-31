@@ -52,3 +52,7 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.getElementById('close-cookie-bar').addEventListener('click', function() {
+    document.getElementById('cookie-bar').style.display = 'none';
+  });
