@@ -29,22 +29,34 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="contenu-a-traduire">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Locations Bachelier</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="#about"><?php echo $about ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects"><?php echo $TitleActivity ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#myCarousel"><?php echo $photo ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#recomandation"><?php echo $reco ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dispo"><?php echo $dispo ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact"><?php echo $contact ?></a></li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Langue
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
+                        <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                        <li><a class="dropdown-item" href="?lang=de">Deutsch</a></li>
+                        <li><a class="dropdown-item" href="?lang=es">Español</a></li>
+
+                        </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -79,8 +91,8 @@
         <section class="projects-section bg-light" id="projects">
             <div class="text-center mb-5">
                 <i class="fa-solid fa-house fa-2x mb-2 text-dark"></i>
-                <p><h2><?php echo $TitleActivity ?></h2></p>
-            </div>
+                <p><h2 class="title_underline"><?php echo $TitleActivity ?></h2></p>
+            </div> 
 
             <div class="container px-4 px-lg-5">
 
@@ -134,10 +146,10 @@
 
             <div class="text-center mb-3 mt-5">
                 <i class="fa-solid fa-image fa-2x mb-2 text-dark"></i>
-                <p><h2><?php echo $photo ?></h2></p>
+                <p><h2 class="title_underline"><?php echo $photo ?></h2></p>
             </div>
 
-            <div id="myCarousel" class="carousel slide w-50 mx-auto mb-5 mt-5" data-bs-ride="carousel">
+            <div id="myCarousel" class="carousel slide w-75 mx-auto mb-5 mt-5" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -145,13 +157,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="assets/img/Chambre_enfant.avif" class="d-block w-100" alt=""> 
+                    <img src="assets/img/Chambre_enfant.avif" class="d-block w-100" alt="" data-bs-toggle="modal" data-bs-target="#myModal"> 
                     </div>
                     <div class="carousel-item">
-                    <img src="assets/img/Chambre_parent.webp" class="d-block w-100" alt="">
+                    <img src="assets/img/Chambre_parent.webp" class="d-block w-100" alt="" data-bs-toggle="modal" data-bs-target="#myModal">
                     </div>
                     <div class="carousel-item">
-                    <img src="assets/img/cuisine.jpeg" class="d-block w-100" alt="">
+                    <img src="assets/img/cuisine.jpeg" class="d-block w-100" alt="" data-bs-toggle="modal" data-bs-target="#myModal">
                     </div>
                 </div>
 
@@ -172,10 +184,11 @@
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-heart fa-2x mb-2 text-dark"></i>
-                        <h2 class="text-dark mb-5"><?php echo $recoTitle ?></h2>
+                        <h2 class="text-dark mb-5 title_underline"><?php echo $recoTitle ?></h2>
                         <div class="container px-4 px-lg-5">
                             <div class="row gx-4 gx-lg-5">
-                                <div class="col-md-4 mb-3 mb-md-0">
+
+                                <div class="col-md-6 mb-3 mb-md-0">
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
                                             <h4 class="text-uppercase m-0"><?php echo $parc ?></h4>
@@ -186,7 +199,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="col-md-6 mb-3 mb-md-0">
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
                                             <h4 class="text-uppercase m-0"><?php echo $restaurant ?></h4>
@@ -195,23 +208,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-0">
-                                    <div class="card py-4 h-100">
-                                        <div class="card-body text-center">
-                                            <h4 class="text-uppercase m-0"><?php echo $icecream ?></h4>
-                                            <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50">Commerce + photo</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-center mb-3 mt-5">
-                                <p><?php echo $other_reco ?></p>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div> 
         </section>
+
+
+        <!-- Disponibility -->
+        <section class="text-center mb-5 mt-5" id="dispo">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                <i class="fa-solid fa-calendar-days fa-2x mb-2 text-dark"></i>
+                <h4 class="m-0 title_underline"><?php echo $dispo ?></h4>
+                    <div>
+                        <div class="airbnb-embed-frame" data-id="1076467562844958320" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;"><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget">Voir sur Airbnb</a><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget" rel="nofollow">Maison de vacances</a><script async="" src="https://www.airbnb.fr/embeddable/airbnb_jssdk"></script></div>                </div>
+                    </div>
+                <p><?php echo $dispo_desc ?></p>    
+            </div>
+        </section>
+
 
         <!-- Contact-->
         <section class="contact-section" id="contact">
@@ -219,7 +234,7 @@
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-address-book fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Contact</h2>
+                        <h2 class="text-white mb-5 title_underline">Contact</h2>
                         <div class="container px-4 px-lg-5">
                             <div class="row gx-4 gx-lg-5">
                                 <div class="col-md-4 mb-3 mb-md-0">
@@ -257,10 +272,6 @@
                     </div>
                 </div>  
 
-
-
-                <div class="airbnb-embed-frame" data-id="1076467562844958320" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;"><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget">Voir sur Airbnb</a><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget" rel="nofollow">Maison de vacances</a><script async="" src="https://www.airbnb.fr/embeddable/airbnb_jssdk"></script></div>                </div>
-
         </section>
 
         <!-- Footer-->
@@ -272,13 +283,9 @@
         <span id="close-cookie-bar">&#10006;</span> 
         </div>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

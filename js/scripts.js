@@ -53,6 +53,37 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+
+
+const langueSelect = document.getElementById('navbarDropdown'); // Sélectionne le menu déroulant
+const contenuATraduire = document.getElementById('contenu-a-traduire'); // Sélectionne l'élément qui contient le contenu à traduire
+
+langueSelect.addEventListener('change', () => {
+  const langue = langueSelect.value; // Récupère la langue sélectionnée
+
+  // Charge le fichier de langue correspondant
+  fetch('langage/' + langue + '.php')
+    .then(response => response.text())
+    .then(html => {
+      // Met à jour le contenu de la page avec les traductions
+      contenuATraduire.innerHTML = html;
+    });
+});
+
+
+
 document.getElementById('close-cookie-bar').addEventListener('click', function() {
     document.getElementById('cookie-bar').style.display = 'none';
   });
+
+
+
+const images = document.querySelectorAll('#myCarousel img');
+const modalImage = document.getElementById('modalImage');
+
+images.forEach(image => {
+image.addEventListener('click', () => {
+    const imageUrl = image.src;
+    modalImage.src = imageUrl;
+});
+});

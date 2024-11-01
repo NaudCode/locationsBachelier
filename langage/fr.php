@@ -3,8 +3,9 @@
 // Nav bar
 $about = "À propos";
 $photo = "Photos";
-$activity = "Activités";
-$contact = "Contact";
+$activity = "Notre Maison";
+$dispo = "Les disponibilités";
+$contact = "Contacts";
 $reco = "Recommandations";
 
 // Cover Page
@@ -59,13 +60,14 @@ $recoTitle = "Nos recommandations";
 $parc = "Parc d'attraction";
 $pdf_desc = "Vivez l'histoire au Puy du Fou ! Spectacles grandioses et reconstitutions immersives vous feront voyager dans le temps.  Une expérience inoubliable pour toute la famille !";
 $restaurant = "Restaurants";
-$icecream = "Commerces";
 $lien_office = "https://www.payssaintgilles-tourisme.fr/destination/nos-destinations/bretignolles-sur-mer/";
 $lien_mairie = "https://www.bretignolles-sur-mer.fr/";
 
 $other_reco = "Pour toutes autres informations, nous vous recommandons d'aller sur le site de <a href=\"" . $lien_office . "\" target=\"_blank\">l'office du tourisme</a>, ou celui celui de la <a href=\"" . $lien_mairie . "\" target=\"_blank\">mairie de Bretignolles sur mers</a>.
 <br>Les informations sur les horaires et hauteurs des marées y sont présentes.";
 
+//disponibility
+$dispo_desc = "Pour connaître les dates de disponibilité du logement, veuillez consulter le calendrier sur Airbnb.";
 
 // Contacts
 $addressTitle = "Adresse";

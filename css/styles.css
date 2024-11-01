@@ -88,6 +88,11 @@
   box-sizing: border-box;
 }
 
+.title_underline {
+  text-decoration: underline;
+  text-decoration-color: #64a19d;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -3817,7 +3822,7 @@ textarea.form-control-lg {
   --bs-navbar-active-color: #64a19d;
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
-  --bs-navbar-brand-font-size: 1.25rem;
+  --bs-navbar-brand-font-size: 1rem;
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
@@ -5037,6 +5042,11 @@ textarea.form-control-lg {
     margin-left: calc(-1 * var(--bs-list-group-border-width));
     border-left-width: var(--bs-list-group-border-width);
   }
+
+  #myCarousel .carousel-inner {
+      width: 100% !important; 
+  }
+
 }
 @media (min-width: 992px) {
   .list-group-horizontal-lg {
@@ -6115,6 +6125,22 @@ textarea.form-control-lg {
 }
 .carousel-dark .carousel-caption {
   color: #000;
+}
+
+#myModal .modal-body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myModal .modal-dialog {
+  max-width: 100%; 
+  margin: 0;
+}
+
+#myModal .modal-content {
+  border: none; 
 }
 
 .spinner-grow,
