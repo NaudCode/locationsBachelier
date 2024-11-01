@@ -7,7 +7,7 @@ $activity = "Unser Haus";
 $dispo = "Verfügbarkeit";
 $contact = "Kontakt";
 $reco = "Empfehlungen";
-$langage = "Sprache";
+
 
 // Startseite
 $start = "Entdecken";

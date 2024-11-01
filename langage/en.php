@@ -7,7 +7,7 @@ $activity = "Our House";
 $dispo = "Availability";
 $contact = "Contact";
 $reco = "Recommendations";
-$langage = "Language"; 
+
 
 // Cover Page
 $start = "Discover";

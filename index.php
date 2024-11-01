@@ -60,26 +60,17 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="#about"><?php echo $about ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects"><?php echo $TitleActivity ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects"><?php echo $activity ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#myCarousel"><?php echo $photo ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#recomandation"><?php echo $reco ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#dispo"><?php echo $dispo ?></a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact"><?php echo $contact ?></a></li>
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php echo $langage ?>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
-                        <li><a class="dropdown-item" href="?lang=en">English</a></li>
-                        <li><a class="dropdown-item" href="?lang=de">Deutsch</a></li>
-                        <li><a class="dropdown-item" href="?lang=es">Español</a></li>
-                        </ul>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+    
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
@@ -87,7 +78,12 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Bretignolles <br> sur-Mer</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5"><?php echo $firstH2 ?></h2>
-                        <a class="btn btn-primary" href="#about"><?php echo $start ?></a>
+                            <div class="flags-container">
+                                <a href="?lang=fr" class="text-white-50 nav-link">🇫🇷 Fançais |</a>
+                                <a href="?lang=en" class="text-white-50 nav-link">🇬🇧 English |</a>
+                                <a href="?lang=es" class="text-white-50 nav-link">🇪🇸 España |</a>
+                                <a href="?lang=de" class="text-white-50 nav-link">🇩🇪 Deutsch</a>
+                            </div>  
                     </div>
                 </div>
             </div>
@@ -110,7 +106,7 @@
         <section class="projects-section bg-light" id="projects">
             <div class="text-center mb-5">
                 <i class="fa-solid fa-house fa-2x mb-2 text-dark"></i>
-                <p><h2 class="title_underline"><?php echo $TitleActivity ?></h2></p>
+                <p><h2 class="title_underline"><?php echo $activity ?></h2></p>
             </div> 
 
             <div class="container px-4 px-lg-5">
