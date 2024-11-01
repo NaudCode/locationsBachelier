@@ -3,8 +3,28 @@
 
   if ($langue == 'fr') {
     include './langage/fr.php';
+   } elseif ($langue == 'de') {
+    include './langage/de.php';
+  } elseif ($langue == 'es') {
+    include './langage/es.php';
   } else {
     include './langage/en.php';
+  }
+?>
+
+<?php
+  $langue = isset($_GET['lang']) ? $_GET['lang'] : 'fr'; // Langue par défaut : français
+
+  if ($langue === 'fr') {
+    include 'langage/fr.php';
+  } elseif ($langue === 'en') {
+    include 'langage/en.php';
+  } elseif ($langue === 'de') {
+    include 'langage/de.php';
+  } elseif ($langue === 'es') {
+    include 'langage/es.php';
+  } else {
+    // Gérer les langues non supportées (ex: afficher un message d'erreur)
   }
 ?>
 
@@ -29,7 +49,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body id="contenu-a-traduire">
+    <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -47,14 +67,13 @@
                         <li class="nav-item"><a class="nav-link" href="#contact"><?php echo $contact ?></a></li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Langue
+                        <?php echo $langage ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
                         <li><a class="dropdown-item" href="?lang=en">English</a></li>
                         <li><a class="dropdown-item" href="?lang=de">Deutsch</a></li>
                         <li><a class="dropdown-item" href="?lang=es">Español</a></li>
-
                         </ul>
                         </li>
                     </ul>
@@ -286,6 +305,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

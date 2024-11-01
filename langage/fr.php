@@ -7,6 +7,7 @@ $activity = "Notre Maison";
 $dispo = "Les disponibilités";
 $contact = "Contacts";
 $reco = "Recommandations";
+$langage = "langue";
 
 // Cover Page
 $start = "Découvrir";
