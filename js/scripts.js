@@ -1,5 +1,5 @@
 function loadLanguage(lang) {
-    fetch(`./js/${lang}.json`)  // Chemin modifié pour indiquer le dossier 'js'
+    fetch(`./js/${lang}.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Erreur HTTP! statut: ${response.status}`);
@@ -10,12 +10,14 @@ function loadLanguage(lang) {
             for (const id in translations) {
                 const element = document.getElementById(id);
                 if (element) {
-                    element.textContent = translations[id];
+                    // Remplacer les \n par des balises <br>
+                    element.innerHTML = translations[id].replace(/\n/g, "<br>");
                 }
             }
         })
         .catch(error => console.error("Erreur de chargement de la langue :", error));
 }
+
 
 // Détecter la langue de l'URL et charger la langue correspondante
 const urlParams = new URLSearchParams(window.location.search);
