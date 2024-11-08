@@ -3854,7 +3854,9 @@ textarea.form-control-lg {
 
 
 
-
+#descHouse {
+  white-space: pre-line;
+}
 
 .navbar > .container,
 .navbar > .container-fluid,

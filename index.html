@@ -1,37 +1,5 @@
-<?php
-  $langue = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-
-  if ($langue == 'fr') {
-    include './langage/fr.php';
-   } elseif ($langue == 'de') {
-    include './langage/de.php';
-  } elseif ($langue == 'es') {
-    include './langage/es.php';
-  } else {
-    include './langage/en.php';
-  }
-?>
-
-<?php
-  $langue = isset($_GET['lang']) ? $_GET['lang'] : 'fr'; // Langue par défaut : français
-
-  if ($langue === 'fr') {
-    include 'langage/fr.php';
-  } elseif ($langue === 'en') {
-    include 'langage/en.php';
-  } elseif ($langue === 'de') {
-    include 'langage/de.php';
-  } elseif ($langue === 'es') {
-    include 'langage/es.php';
-  } else {
-    // Gérer les langues non supportées (ex: afficher un message d'erreur)
-  }
-?>
-
-
-
 <!DOCTYPE html>
-<html>
+<html lang="fr"> 
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -41,7 +9,6 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> <!-- icone à changer-->
 
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
@@ -54,17 +21,16 @@
         <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about"><?php echo $about ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects"><?php echo $activity ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#myCarousel"><?php echo $photo ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#recomandation"><?php echo $reco ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#dispo"><?php echo $dispo ?></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact"><?php echo $contact ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" id="navabout">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects" id="navactivity">Notre Maison</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#myCarousel" id="navphoto">Photos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#recomandation" id= "navreco">Nos recommandations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dispo" id="navdispo">Les disponibilités</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact" id="navcontact">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,7 +43,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Bretignolles <br> sur-Mer</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5"><?php echo $firstH2 ?></h2>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5" id="firstH2">Profitez d'une spacieuse maison avec piscine privative, à deux pas de l'océan.</h2>
                             <div class="flags-container">
                                 <a href="?lang=fr" class="text-white-50 nav-link">🇫🇷 Fançais |</a>
                                 <a href="?lang=en" class="text-white-50 nav-link">🇬🇧 English |</a>
@@ -91,22 +57,31 @@
         <!-- About-->
         <section class="about-section text-center" id="about">
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-10">
-                        <h2 class="text-white mb-4"><?php echo $house ?></h2>
-                        <p class="text-white-50"><?php echo $descHouse ?></p>
-                    </div>
+              <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-10">
+          
+                  <h2 class="text-white mb-4"
+           id="house">Un havre de paix idéal pour des vacances en famille.</h2>
+                  <p class="text-white-50" id="descHouse">
+                    Cette charmante maison de 3 chambres, avec jardin entièrement clôturé, vous offre un cadre idéal pour des vacances relaxantes. 
+                    À 300 mètres de l'océan, avec un chemin de promenade qui vous emmène en 10 minutes à pied aux plages et commerces de la Parée ou de la Sauzaie.
+                    Commerce Vival et restaurant à 5 minutes à pied.
+                    Profitez du jardin, du barbecue, de la terrasse ou de la véranda pour des moments de détente en famille ou entre amis. 
+                    Notre maison est équipée de tout le nécessaire pour un séjour agréable. 
+                    Remarque : La maison est encore en cours de rénovation (quelques finitions à faire). Cependant, cela ne vous empêchera pas d'y séjourner confortablement.
+                  </p>
                 </div>
-                <img class="img-fluid" src="assets/img/veranda_cosy.jpeg" alt="..." />
+              </div>
+              <img class="img-fluid" src="assets/img/veranda_cosy.jpeg" alt="..." />
             </div>
-        </section>
+          </section>
 
 
         <!-- Projects home equipments-->
         <section class="projects-section bg-light" id="projects">
             <div class="text-center mb-5">
                 <i class="fa-solid fa-house fa-2x mb-2 text-dark"></i>
-                <p><h2 class="title_underline"><?php echo $activity ?></h2></p>
+                <p><h2 class="title_underline" id="navactivity"></h2></p>
             </div> 
 
             <div class="container px-4 px-lg-5">
@@ -117,9 +92,16 @@
                         <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-lg-right">
-                                    <h4 class="text-white text-center mb-3"><?php echo $hobbiesTitle ?></h4>
-                                    <p class="mb-0 text-white-50"><?php echo $hobbies ?></p>
-                                    <p class="mb-0 text-white-50"><?php echo $tv ?></p>
+                                    <h4 class="text-white text-center mb-3" id="hobbiesTitle">Loisirs & Multimédia</h4>
+                                    <p class="mb-0 text-white-50" id="hobbies">Profitez des différents loisirs mis à votre disposition : \n</p>
+                                    <p class="mb-0 text-white-50">
+                                        <ul>
+                                            <li id="hobby1">Jeux de société</li>
+                                            <li id="hobby2">Baby-foot</li>
+                                            <li id="hobby3">Jouets pour enfants</li>
+                                          </ul>
+                                    </p>
+                                    <p class="mb-0 text-white-50" id="tv">Restez connecté grâce à l'accès Wi-Fi mis à disposition.\nVous pouvez également profiter de téléviseurs connectés (Android TV) dans les chambres adultes, le salon</p>
                                 </div>
                             </div>
                         </div>
@@ -132,8 +114,11 @@
                         <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-lg-left">
-                                <h4 class="text-white text-center "><?php echo $swimpoolTitle ?></h4>
-                                <p class="mb-0 text-white-50"><?php echo $swimpool ?></p>
+                                <h4 class="text-white text-center" id="swimpoolTitle">Piscine & Extérieur</h4>
+                                <p class="mb-0 text-white-50" id="swimpool">
+                                    Savourez notre piscine traitée au sel, avec une profondeur allant de 0.6m à 2m, couverte par un dôme rétractable de 1.8m de hauteur. 
+                                    Le système de régulation du pH automatique vous garantit une eau douce, sans sensation de chlore sur la peau et les cheveux. 
+                                    Ainsi qu'une terrasse aménagée sous le soleil ou à l'ombre grâce au store banne motorisé, pour vos repas en plein air, avec un barbecue à gaz est à votre disposition.</p>
                                 </div>
                             </div>
                         </div>
@@ -146,8 +131,15 @@
                         <div class="bg-black h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-lg-right">
-                                    <h4 class="text-white text-center"><?php echo $kitchenTitle ?></h4>
-                                    <p class="mb-0 text-white-50"><?php echo $kitchen ?></p>
+                                    <h4 class="text-white text-center" id="kitchenTitle">Équipement de la maison</h4>
+                                    <p class="mb-0 text-white-50" id="kitchen"></p>
+                                    <p>
+                                        <ul>
+                                            <li id="item1">Cuisine équipée (sel, poivre, huile, cafetière à grain, Sodastream...)</li>
+                                            <li id="item2">Draps de lit et serviettes;</li>
+                                            <li id="item3">Machine à laver.</li>
+                                         </ul>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +153,7 @@
 
             <div class="text-center mb-3 mt-5">
                 <i class="fa-solid fa-image fa-2x mb-2 text-dark"></i>
-                <p><h2 class="title_underline"><?php echo $photo ?></h2></p>
+                <p><h2 class="title_underline" id="navphoto">Photos</h2></p>
             </div>
 
             <div id="myCarousel" class="carousel slide w-75 mx-auto mb-5 mt-5" data-bs-ride="carousel">
@@ -180,17 +172,40 @@
                     <div class="carousel-item">
                     <img src="assets/img/cuisine.jpeg" class="d-block w-100" alt="" data-bs-toggle="modal" data-bs-target="#myModal">
                     </div>
+                    <div class="carousel-item">
+                    <img src="assets/img/salon_2.avif" class="d-block w-100" alt="" data-bs-toggle="modal" data-bs-target="#myModal">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="assets/img/salon.avif" class="d-block w-100" alt="" data-bs-toggle="modal" data-bs-target="#myModal">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="assets/img/terrasse.avif" class="d-block w-100" alt="" data-bs-toggle="modal" data-bs-target="#myModal">
+                    </div>
                 </div>
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden"><?php echo $previous ?></span>
+                    <span class="visually-hidden" id="previous">Précédent</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden"><?php echo $next ?></span>
+                    <span class="visually-hidden" id="next">Suivant</span>
                 </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img id="modalImage" src="" class="img-fluid" alt="Image agrandie">
+                        </div>
+                    </div>
                 </div>
+            </div>
+
         </section> 
 
 
@@ -199,17 +214,21 @@
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-heart fa-2x mb-2 text-dark"></i>
-                        <h2 class="text-dark mb-5 title_underline"><?php echo $recoTitle ?></h2>
+                        <h2 class="text-dark mb-5 title_underline" id="navreco">Nos recomandations</h2>
                         <div class="container px-4 px-lg-5">
                             <div class="row gx-4 gx-lg-5">
 
                                 <div class="col-md-6 mb-3 mb-md-0">
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
-                                            <h4 class="text-uppercase m-0"><?php echo $parc ?></h4>
+                                            <h4 class="text-uppercase m-0" id="parc">Parc d'attraction</h4>
                                             <hr class="my-4 mx-auto" />
                                             <div class="small text-black-50"><a href="https://www.puydufou.com/" target="_blank"><img src="assets/img/logo_pdfou.jpg" class="img-fluid" alt="Logo Puy du fou"></a>
-                                            <p><?php echo $pdf_desc ?></p>
+                                                <p id="pdf_desc">
+                                                    Vivez l'histoire au Puy du Fou !
+                                                    Spectacles grandioses et reconstitutions immersives vous feront voyager dans le temps.
+                                                    Une expérience inoubliable pour toute la famille !
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -217,13 +236,21 @@
                                 <div class="col-md-6 mb-3 mb-md-0">
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
-                                            <h4 class="text-uppercase m-0"><?php echo $restaurant ?></h4>
+                                            <h4 class="text-uppercase m-0" id="restaurant">Restaurant</h4>
                                             <hr class="my-4 mx-auto" />
                                             <div class="small text-black-50"><a href="#!">Lien google map</a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p id="other">Pour toutes autres informations, nous vous recommandons d'aller sur le site de la mairie ou de l'office du tourisme : </p> 
+                            <a href="https://www.payssaintgilles-tourisme.fr/..." target="_blank" id="link1">l'office du tourisme</a><br>
+                            <a href="https://www.bretignolles-sur-mer.fr/" target="_blank" id="link2">mairie de Bretignolles sur mers</a>
+                            <p></p>
+                            <p id="other2">Les horaires des marées y sont présentes.</p>
                         </div>
                     </div>
                 </div> 
@@ -234,11 +261,11 @@
         <section class="text-center mb-5 mt-5" id="dispo">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
                 <i class="fa-solid fa-calendar-days fa-2x mb-2 text-dark"></i>
-                <h4 class="m-0 title_underline"><?php echo $dispo ?></h4>
+                <h4 class="m-0 title_underline" id="navdispo">Les disponibilités</h4>
                     <div>
                         <div class="airbnb-embed-frame" data-id="1076467562844958320" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;"><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget">Voir sur Airbnb</a><a href="https://www.airbnb.fr/rooms/1076467562844958320?check_in=2024-11-01&amp;check_out=2024-11-06&amp;guests=1&amp;adults=4&amp;s=66&amp;source=embed_widget" rel="nofollow">Maison de vacances</a><script async="" src="https://www.airbnb.fr/embeddable/airbnb_jssdk"></script></div>                </div>
                     </div>
-                <p><?php echo $dispo_desc ?></p>    
+                <p id="description">Pour connaître les dates de disponibilité du logement, veuillez consulter le calendrier sur Airbnb.</p>    
             </div>
         </section>
 
@@ -249,16 +276,16 @@
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-address-book fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5 title_underline">Contact</h2>
+                        <h2 class="text-white mb-5 title_underline" id="navcontact">Contact</h2>
                         <div class="container px-4 px-lg-5">
                             <div class="row gx-4 gx-lg-5">
                                 <div class="col-md-4 mb-3 mb-md-0">
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
                                             <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                            <h4 class="text-uppercase m-0"><?php echo $addressTitle ?></h4>
+                                            <h4 class="text-uppercase m-0" id="addressTitle">Adresse</h4>
                                             <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50"><?php echo $address ?></div>
+                                            <div class="small text-black-50">44 Rue Sainte Véronique <br> 85470 Brétignolles Sur Mers <br> France</div>
                                         </div>
                                     </div>
                                 </div>
@@ -268,7 +295,7 @@
                                             <i class="fas fa-envelope text-primary mb-2"></i>
                                             <h4 class="text-uppercase m-0">Email</h4>
                                             <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50"><a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a></div>
+                                            <div class="small text-black-50"><a href="mailto:+33664162493">+33 6 64 16 24 93</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -276,9 +303,9 @@
                                     <div class="card py-4 h-100">
                                         <div class="card-body text-center">
                                             <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                            <h4 class="text-uppercase m-0"><?php echo $phone ?></h4>
+                                            <h4 class="text-uppercase m-0" id="phone">Téléphone</h4>
                                             <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50"><a href="tel:<?php echo $phone_number ?>"><?php echo $phone_number ?></a></div>
+                                            <div class="small text-black-50"><a href="naud.bachelier.alex@gmail.com">naud.bachelier.alex@gmail.com</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -294,12 +321,16 @@
         
         <!-- Cookies Promp -->
         <div id="cookie-bar">
-        <p><?php echo $biscuitMessage ?></p>
+        <p id="message">Nous respectons votre vie privée : zéro cookie, zéro collecte des données personnelles.</p>
         <span id="close-cookie-bar">&#10006;</span> 
         </div>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/langage.js"></script> 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+        <script src="js/scripts.js"></script> 
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
     </body>
 </html>
