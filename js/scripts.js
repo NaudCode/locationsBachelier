@@ -77,16 +77,13 @@ loadLanguage(lang);
     document.getElementById('cookie-bar').style.display = 'none';
   });
   
-  // Affichage des images dans la modale
-  const images = document.querySelectorAll('#myCarousel img');
-  const modalImage = document.getElementById('modalImage');
-  
-  images.forEach(image => {
-    image.addEventListener('click', () => {
-      const imageUrl = image.src;
-      modalImage.src = imageUrl;
-    });
-  });
+  function showModal(image) {
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = image.src; // Met à jour l'image du modal avec celle cliquée
+    const myModal = new bootstrap.Modal(document.getElementById('myModal'));
+    myModal.show(); // Affiche le modal
+}
+
 
   window.addEventListener('DOMContentLoaded', (event) => {
     // Votre code JavaScript ici

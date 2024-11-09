@@ -76,7 +76,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #64a19d;
+  --bs-link-color: #fff;
   --bs-link-hover-color: #50817e;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #faf4e0;
@@ -3818,7 +3818,7 @@ textarea.form-control-lg {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
   --bs-navbar-hover-color: #50817e;
-  --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
+  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.3);
   --bs-navbar-active-color: #64a19d;
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
@@ -8465,11 +8465,6 @@ textarea.form-control-lg {
   word-break: break-word !important;
 }
 
-/* rtl:end:remove */
-.text-primary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
-}
 
 .text-secondary {
   --bs-text-opacity: 1;
@@ -11272,7 +11267,7 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
+  color: #fff;
   border: 1px solid #64a19d;
 }
 #mainNav .navbar-toggler:focus {
@@ -11292,6 +11287,20 @@ body {
   outline: none;
   background-color: transparent;
 }
+
+
+@media (max-width: 992px) {
+  #mainNav .nav-link {
+    color: #fff !important;
+  }
+
+  #mainNav .nav-link:hover {
+    color: #67c29c !important;
+  }
+}
+
+
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -11304,14 +11313,8 @@ body {
     padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
-  #mainNav .nav-link {
-    transition: none;
-    padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
-  }
+
+
   #mainNav .nav-link:active {
     color: #fff;
   }
@@ -11528,4 +11531,27 @@ body {
   right: 20px;
   cursor: pointer;
   font-size: 18px;
+}
+
+.gallery-image {
+  width: 150px; /* Taille des miniatures */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.contact-section {
+  --bs-primary: #67c29c;
+  --bs-primary-rgb: 103, 194, 156;
+}
+
+.contact-section a {
+  color: rgb(100, 161, 157) !important;
+  text-decoration: none !important;
+}
+.contact-section a:hover {
+  color: #85ceb0 !important;
 }
