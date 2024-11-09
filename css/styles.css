@@ -11544,9 +11544,10 @@ body {
 }
 
 .contact-section {
-  --bs-primary: #67c29c;
-  --bs-primary-rgb: 103, 194, 156;
+  --bs-primary: #adb5bd; /* Gris clair */
+  --bs-primary-rgb: rgba(173, 181, 189, 1); /* Gris clair en mode RGB, sans transparence */
 }
+
 
 .contact-section a {
   color: rgb(100, 161, 157) !important;
