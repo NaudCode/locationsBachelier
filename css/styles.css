@@ -11536,6 +11536,7 @@ body {
 .gallery-image {
   width: 150px; /* Taille des miniatures */
   cursor: pointer;
+  object-fit: cover;
   transition: transform 0.2s;
 }
 
@@ -11556,3 +11557,18 @@ body {
 .contact-section a:hover {
   color: #85ceb0 !important;
 }
+
+.card-body .small {
+  font-size: clamp(12px, 2vw, 14px); /* Ajuste la taille entre 12px et 14px dynamiquement */
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden; /* Coupe le texte qui dépasse */
+  text-overflow: ellipsis; /* Ajoute des points de suspension si le texte dépasse */
+}
+
+.card-body a {
+  display: inline-block; /* Maintient le texte à une seule ligne */
+  text-decoration: none; /* Supprime la sous-ligne des liens */
+  color: inherit; /* Maintient la couleur héritée */
+  word-break: keep-all; /* Empêche la coupure des mots */
+}
+
