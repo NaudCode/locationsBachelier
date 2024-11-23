@@ -148,91 +148,134 @@
             </div>
         </section>
 
-<!-- Image Gallery Section -->
-<section id="myCarousel">
-    <div class="text-center mb-3 mt-5">
-        <i class="fa-solid fa-image fa-2x mb-2 text-dark"></i>
-        <p><h2 class="title_underline" id="titlePhoto">Photos</h2></p>
-    </div>
+        <!-- Image Gallery Section -->
+        <section id="myCarousel">
+            <div class="text-center mb-3 mt-5">
+                <i class="fa-solid fa-image fa-2x mb-2 text-dark"></i>
+                <p><h2 class="title_underline" id="titlePhoto">Photos</h2></p>
+            </div>
 
-    <!-- Image Grid -->
-    <div class="d-flex flex-wrap justify-content-center gap-5 mb-3">
-        <img src="assets/img/Chambre_enfant.avif" class="img-thumbnail gallery-image" alt="Chambre enfant" onclick="showModal(this)">
-        <img src="assets/img/Chambre_adulte.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
-        <img src="assets/img/Chambre_parent.webp" class="img-thumbnail gallery-image" alt="Chambre parent" onclick="showModal(this)">
-        <img src="assets/img/cuisine.jpeg" class="img-thumbnail gallery-image" alt="Cuisine" onclick="showModal(this)">
-        <img src="assets/img/Salle_a_manger.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
-    </div>
-    <div class="d-flex flex-wrap justify-content-center gap-4 mb-5">
-        <img src="assets/img/salon_2.avif" class="img-thumbnail gallery-image" alt="Salon 2" onclick="showModal(this)">
-        <img src="assets/img/salon.avif" class="img-thumbnail gallery-image" alt="Salon" onclick="showModal(this)">
-        <img src="assets/img/terrasse.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
-        <img src="assets/img/new_salle_de_bain.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
-        <img src="assets/img/new_salle_de_bain_2.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
-    </div>
+            <!-- Image Grid -->
+            <div class="d-flex flex-wrap justify-content-center gap-5 mb-3">
+                <img src="assets/img/Chambre_enfant.avif" class="img-thumbnail gallery-image" alt="Chambre enfant" onclick="showModal(this)">
+                <img src="assets/img/Chambre_adulte.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
+                <img src="assets/img/Chambre_parent.webp" class="img-thumbnail gallery-image" alt="Chambre parent" onclick="showModal(this)">
+                <img src="assets/img/cuisine.jpeg" class="img-thumbnail gallery-image" alt="Cuisine" onclick="showModal(this)">
+                <img src="assets/img/Salle_a_manger.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-4 mb-5">
+                <img src="assets/img/salon_2.avif" class="img-thumbnail gallery-image" alt="Salon 2" onclick="showModal(this)">
+                <img src="assets/img/salon.avif" class="img-thumbnail gallery-image" alt="Salon" onclick="showModal(this)">
+                <img src="assets/img/terrasse.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
+                <img src="assets/img/new_salle_de_bain.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
+                <img src="assets/img/new_salle_de_bain_2.avif" class="img-thumbnail gallery-image" alt="Terrasse" onclick="showModal(this)">
+            </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="modalImage" src="" class="img-fluid" alt="Photo">
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img id="modalImage" src="" class="img-fluid" alt="Photo">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
-<!-- Recommandations -->
+    <!-- Recommandations -->
         <section class="reco-section bg-light" id="recomandation">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-heart fa-2x mb-2 text-dark"></i>
-                        <h2 class="text-dark mb-5 title_underline" id="titleReco">Nos recommandations</h2>
-                        <div class="container px-4 px-lg-5">
-                            <div class="row gx-4 gx-lg-5">
-
-                                <div class="col-md-6 mb-3 mb-md-0">
-                                    <div class="card py-4 h-100">
-                                        <div class="card-body text-center">
-                                            <h4 class="text-uppercase m-0" id="parc">Parc d'attraction</h4>
-                                            <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50"><a href="https://www.puydufou.com/" target="_blank"><img src="assets/img/logo_pdfou.jpg" class="img-fluid" alt="Logo Puy du fou"></a>
-                                                <p id="pdf_desc">
-                                                    Vivez l'histoire au Puy du Fou !
-                                                    Spectacles grandioses et reconstitutions immersives vous feront voyager dans le temps.
-                                                    Une expérience inoubliable pour toute la famille !
-                                                </p>
-                                            </div>
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-heart fa-2x mb-2 text-dark"></i>
+                    <h2 class="text-dark mb-5 title_underline" id="titleReco">Nos recommandations</h2>
+                    <div class="container px-4 px-lg-5">
+                        <div class="row gx-4 gx-lg-5">
+                            <!-- Box 1: Parc d'attraction -->
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card py-4 h-100">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-uppercase m-0" id="parc">Parc d'attraction</h4>
+                                        <hr class="my-4 mx-auto" />
+                                        <div class="small text-black-50 mb-3">
+                                            <a href="https://www.puydufou.com/" target="_blank">Puy du fou</a>
+                                        </div> 
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50366.80611659822!2d-1.020403990976216!3d46.89841373279954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48065eb9615fe2ab%3A0x48386616c38da263!2sPuy%20du%20Fou!5e0!3m2!1sen!2sfr!4v1732354632527!5m2!1sen!2sfr"  
+                                            class="responsive-iframe" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Box 2: Restaurant -->
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card py-4 h-100">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-uppercase m-0" id="restaurant">Restaurant</h4>
+                                        <hr class="my-4 mx-auto" />
+                                        <div class="small text-black-50 mb-3">
+                                            <a href="https://maps.app.goo.gl/axne5Amexfst4Jun8" target="_blank">L'Anse Des Ilots</a>
+                                        </div>
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1424.7653548290566!2d-1.8824870495302497!3d46.631201027094605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480459975965f5ff%3A0x8df49ff339ae7572!2sL&#39;Anse%20Des%20Ilots!5e0!3m2!1sfr!2sfr!4v1732350749224!5m2!1sfr!2sfr" 
+                                            class="responsive-iframe" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nouvelle rangée -->
+                        <div class="row gx-4 gx-lg-5 mt-4">
+                            <!-- Box 3: Office du tourisme -->
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card py-4 h-100">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-uppercase m-0" id="link1">Office du tourisme</h4>
+                                        <hr class="my-4 mx-auto" />
+                                        <div class="breaksmall text-black-50 d-flex flex-column justify-content-center align-items-center">
+                                            <a href="https://www.payssaintgilles-tourisme.fr/" target="_blank">
+                                                <img src="assets/img/Pays-Saint-Gilles-Croix-de-Vie-Tourisme.png" class="img-fluid" alt="Logo Office du tourisme">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-3 mb-md-0">
-                                    <div class="card py-4 h-100">
-                                        <div class="card-body text-center">
-                                            <h4 class="text-uppercase m-0" id="restaurant">Restaurant</h4>
-                                            <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50"><a href="#!">Lien google map</a></div>
+                            </div>
+                            <!-- Box 4: Mairie -->
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="card py-4 h-100">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-uppercase m-0" id="link2">Mairie de Bretignolles-sur-Mer</h4>
+                                        <hr class="my-4 mx-auto" />
+                                        <div class="breaksmall text-black-50 d-flex flex-column justify-content-center align-items-center h-100">
+                                            <a href="https://www.bretignolles-sur-mer.fr/" target="_blank">
+                                                <img src="assets/img/favicon.png" class="img-fluid" alt="Logo Bretignolles sur Mer">
+                                            </a>
+                                            <a href="https://www.bretignolles-sur-mer.fr/" target="_blank">Bretignolles sur mers</a>
+                                            <p class="my-3 text-center" id="other2">
+                                                Veuillez vous y rendre pour découvrir les activités proposées par la ville, ainsi que consulter les horaires des marées.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <p></p>
-                            <p id="other">Pour toutes autres informations, nous vous recommandons d'aller sur le site de la mairie ou de l'office du tourisme : </p> 
-                            <a href="https://www.payssaintgilles-tourisme.fr/..." target="_blank" id="link1">l'office du tourisme</a><br>
-                            <a href="https://www.bretignolles-sur-mer.fr/" target="_blank" id="link2">mairie de Bretignolles sur mers</a>
-                            <p></p>
-                            <p id="other2">Les horaires des marées y sont présentes.</p>
-                        </div>
                     </div>
-                </div> 
+                </div>
+            </div>
         </section>
+
 
 
         <!-- Disponibility -->

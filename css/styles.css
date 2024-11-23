@@ -11572,3 +11572,23 @@ body {
   word-break: keep-all; /* Empêche la coupure des mots */
 }
 
+.responsive-iframe {
+  width: 100%; /* L'iframe prend toute la largeur de son conteneur */
+  aspect-ratio: 16 / 9; /* Maintient un ratio largeur/hauteur */
+  border: 0; /* Supprime les bordures */
+  display: block; /* Évite les espaces supplémentaires autour */
+}
+
+#other2 {
+  word-wrap: break-word; /* Force le retour à la ligne pour les mots longs */
+  max-width: 90%;       /* Limite la largeur du texte */
+  margin: 0 auto;       /* Centre horizontalement le texte si nécessaire */
+}
+
+
+.breaksmall {
+  display: flex;
+  flex-direction: column;       /* Place les enfants verticalement */
+  justify-content: center;      /* Centre le contenu verticalement */
+  align-items: center;          /* Centre le contenu horizontalement */
+}
